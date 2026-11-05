@@ -1,0 +1,110 @@
+{
+    "manifestVersion": 1,
+    "id": "swagger-manager",
+    "version": "1.0.0",
+    "name": "Swagger Manager",
+    "description": "View, manage and lint Swagger/OpenAPI specifications directly within Azure DevOps. Detects bad naming, default descriptions, and non-RESTful practices.",
+    "publisher": "adam-wheater",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "swagger",
+        "openapi",
+        "api",
+        "linting",
+        "rest",
+        "documentation",
+        "best-practices",
+        "compliance"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "static/icon.png"
+    },
+    "screenshots": [
+        { "path": "static/screenshots/overview.png" },
+        { "path": "static/screenshots/api-detail.png" },
+        { "path": "static/screenshots/settings.png" },
+        { "path": "static/screenshots/admin.png" }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "links": {
+        "repository": {
+            "uri": "https://github.com/adam-wheater/azure-devops-swagger-manager"
+        },
+        "issues": {
+            "uri": "https://github.com/adam-wheater/azure-devops-swagger-manager/issues"
+        },
+        "support": {
+            "uri": "https://github.com/adam-wheater/azure-devops-swagger-manager/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/adam-wheater/azure-devops-swagger-manager"
+    },
+    "branding": {
+        "color": "#0078d4",
+        "theme": "dark"
+    },
+    "galleryFlags": [
+        "Preview"
+    ],
+    "contributions": [
+        {
+            "id": "swagger-manager-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Swagger Manager hub under Pipelines",
+            "targets": [
+                "ms.vss-build-web.build-release-hub-group"
+            ],
+            "properties": {
+                "name": "Swagger Manager",
+                "order": 99,
+                "uri": "dist/SwaggerManager/SwaggerManager.html",
+                "icon": {
+                    "light": "static/icon.png",
+                    "dark": "static/icon.png"
+                }
+            }
+        }
+    ],
+    "scopes": [
+        "vso.project",
+        "vso.work_write",
+        "vso.variablegroups_read",
+        "vso.code",
+        "vso.identity"
+    ],
+    "demands": [],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        }
+    ]
+}

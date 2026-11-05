@@ -1,0 +1,28 @@
+[
+  {
+    "name": "overview",
+    "steps": [{ "waitFor": "text=Scanned" }, { "wait": 1000 }]
+  },
+  {
+    "name": "api-detail",
+    "steps": [
+      { "waitFor": "text=Scanned" },
+      { "wait": 1000 },
+      { "click": "role=button[name=/Billing API/]" },
+      { "waitFor": "text=Endpoints (8)" },
+      { "click": ".ax-disclosure__head:has-text('getPayments')" },
+      { "click": ".ax-disclosure__head:has-text('Record a payment')" }
+    ],
+    "fullPage": true
+  },
+  {
+    "name": "settings",
+    "steps": [{ "waitFor": "text=Scanned" }, { "wait": 1000 }, { "click": "role=tab[name=/Settings/]" }, { "wait": 300 }],
+    "fullPage": true
+  },
+  {
+    "name": "admin",
+    "steps": [{ "waitFor": "text=Scanned" }, { "wait": 1000 }, { "click": "role=tab[name=/Admin/]" }, { "wait": 300 }],
+    "fullPage": true
+  }
+]
